@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>47国志 ONLINE — 開発版 v0.3</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><div class="eyebrow">ORIGINAL STRATEGY GAME PROTOTYPE</div><h1>47国志 <span>ONLINE</span></h1></div><div class="top-actions"><button id="newGame" class="secondary">新しく始める</button><button id="saveGame" class="secondary">セーブ</button></div></header>
+<main>
+<section id="setup" class="panel">
+ <h2>勢力を選択</h2><p>担当する都道府県を選んで、全国統一を目指そう。残りの都道府県はCPUが担当するよ。</p>
+ <div class="setup-row"><label>プレイヤー名 <input id="playerName" maxlength="12" value="プレイヤー"></label><label>開始する都道府県 <select id="startPref"></select></label><button id="startGame" class="primary">ゲーム開始</button></div>
+</section>
+<section id="game" hidden>
+ <div class="stats" id="stats"></div>
+ <div class="layout">
+  <section class="panel map-panel"><div class="section-head"><div><h2>全国勢力図</h2><p>都道府県を選ぶと詳細を確認できる</p></div><span class="legend"><i></i>自勢力　<b></b>CPU</span></div><div id="map" class="pref-grid"></div></section>
+  <aside class="panel detail-panel"><h2 id="detailTitle">領地情報</h2><div id="detail"></div><div class="actions" id="actions"></div></aside>
+ </div>
+ <section class="panel turn-panel"><div><h2 id="turnTitle">1年 1月</h2><p id="turnMessage">命令を出して「次の月へ」を押そう。</p></div><button id="nextTurn" class="primary">次の月へ →</button></section>
+ <section class="panel"><h2>記録</h2><div id="log" class="log"></div></section>
+</section>
+</main><footer>開発版 v0.3 · オリジナル実装 · ローカル保存対応 · オンライン通信は未実装</footer>
+<script src="app.js"></script>
+</body></html>
